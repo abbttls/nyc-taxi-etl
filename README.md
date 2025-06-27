@@ -1,6 +1,6 @@
 # NYC Taxi ETL & Analytics Platform
 
-This project is a beginner-friendly, end-to-end ETL (Extract, Transform, Load) and analytics pipeline for New York City Yellow Taxi trip data. It is designed to help you learn data engineering concepts using real-world data and Azure SQL.
+This project is a beginner-friendly, end-to-end ETL (Extract, Transform, Load) and analytics pipeline for New York City Yellow Taxi trip data. It is designed to help you (me haha) learn data engineering concepts using real-world data and Azure SQL.
 
 ## Features
 - Automated download and conversion of NYC Yellow Taxi data (Parquet to CSV)
