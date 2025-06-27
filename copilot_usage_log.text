@@ -1,0 +1,38 @@
+This file will be used to document GitHub Copilot usage throughout the project.
+
+Intro (written by me): I originally asked copilot to come up with a project for me that would help me learn ETL basics using a Azure
+database I created on the free tier. It pointed me toward the dataset of NYC traffic trips used here, and advised me to just use a single month of yellow taxi trip data. It recommended a file structure, which I built. I asked it to write a script for downloading the data, and it did that. I had to edit the script since the data was only available in PARQUET form. I asked that it modularize the script into functions that get called, and it wrote for me two functions I requested: one for downloading and one for conversion to csv. Then I used inline chat to document both functions. The second time, it assumed autonomusly I wanted documentation when I asked for an unrelated modification. Lastly, it helped me debug certification issues.
+
+I will be requesting that the Copilot agent update this log for me from now on.
+
+---
+
+2025-06-24: Expanded the project description to outline the full ETL and analytics goals, including extraction, transformation, loading, querying, extensibility, documentation, and reproducibility.
+2025-06-24: Further updated the project description to instruct Copilot to provide beginner-friendly, educational guidance and to autonomously update and maintain the Copilot usage log for tracking suggestions, code changes, and learning milestones.
+2025-06-25: Used Copilot to debug and correct file paths for data loading in Python.
+2025-06-25: Discussed and clarified the difference between fare_amount and total_amount in the dataset.
+2025-06-25: Identified and selected critical columns for data cleaning (dropna) in pandas.
+2025-06-25: Added guidance on when to use pd.to_datetime and confirmed datetime columns were already correct.
+2025-06-25: Explored best practices for primary keys, and added a trip_id column to the SQL schema.
+2025-06-25: Generated and corrected a CREATE TABLE script for Azure SQL, including proper syntax for conditional creation.
+2025-06-25: Discussed which ETL steps are best done in Python vs. SQL/stored procedures, and how to organize schema scripts.
+2025-06-25: Integrated the SQL table creation script into the ETL workflow and provided advice on running it from Python or as a standalone SQL file.
+2025-06-25: Assisted with bulk loading data into Azure SQL using pandas and SQLAlchemy with chunking for large datasets.
+2025-06-25: Provided guidance on handling ODBC driver issues and using alternative drivers (`pymssql`) in a conda environment.
+2025-06-25: Helped troubleshoot database connection errors and explained how to load environment variables with `python-dotenv`.
+2025-06-25: Explained the impact of halting a running ETL script and best practices for loading sample data for development.
+2025-06-25: Updated the ETL script (as Copilot agent) to load only the first 200,000 rows for faster iteration.
+2025-06-25: Provided an overview of Azure Data Factory, Palantir Foundry, and Snowflake, and compared their use cases.
+2025-06-25: User suggested an advanced project idea using graph search on taxi trip data; Copilot explained how this could work and its learning value.
+2025-06-25: As Copilot agent, created beginner SQL exercise prompts (without answers) for exploring the loaded taxi data:
+  1. Write a query to show the first 10 rows of the table.
+  2. Write a query to list all unique payment types.
+  3. Write a query to find the average trip distance.
+  4. Write a query to count the number of trips per passenger count.
+  5. Write a query to find the maximum fare amount.
+2025-06-25: Debugged the taxi zone lookup loading process. Identified that some LocationIDs in the taxi data have missing or NULL zone information, and discussed best practices for allowing NULLs in the lookup table schema to support real-world data. Provided guidance on handling NULLs in queries and data models.
+2025-06-25: Provided guidance on grouping by ordered pairs of attributes in SQL, clarified the order of JOIN, WHERE, and GROUP BY clauses, and explained grouping by IDs vs. names in join queries. Wrote the advanced SQL exercise prompt for finding the top 3 most common pickup/dropoff zone pairs by name, and then provided the answer and explanation when requested. Assisted with debugging and understanding the query structure, and supported the user in exploring more complex SQL exercises and query design.
+2025-06-27: Assisted user with debugging and edge case handling for the FindOptimalTrip stored procedure (Dijkstra's algorithm in T-SQL). Updated README to document the procedure, including usage example and educational notes.
+
+---
+Add new entries above as the project evolves. This log helps track Copilot's suggestions, code changes, and learning milestones.

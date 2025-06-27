@@ -1,0 +1,17 @@
+This file is a working prompt for Copilot and other AI tools.
+
+Project: NYC Taxi ETL & Analytics Platform
+
+Goal: Build a reproducible ETL pipeline and analytics environment for NYC Yellow Taxi data, supporting beginner-friendly data engineering, SQL, and analytics workflows.
+
+Key Steps:
+1. Extract: Download and convert raw taxi trip data (Parquet/CSV).
+2. Transform: Clean, validate, enrich, and summarize data.
+3. Load: Bulk load into Azure SQL; design normalized schemas.
+4. Analytics: Store reusable SQL queries, support ad-hoc analysis, and implement advanced analytics (e.g., shortest path between taxi zones using Dijkstra's algorithm in T-SQL).
+5. Documentation: Maintain clear, stepwise instructions and reproducibility.
+6. Extensibility: Allow new data sources and BI tool integration.
+7. Copilot Log: Autonomously track Copilot's suggestions and code changes.
+
+Instructions: Keep responses concise, educational, and beginner-focused. Update this file as project goals or requirements evolve.
+
